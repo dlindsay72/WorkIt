@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WorkoutVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WorkoutVC" customModule="WorkIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run" translatesAutoresizingMaskIntoConstraints="NO" id="XXa-4C-Ef2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlA-4X-iKD">
+                                <rect key="frame" x="0.0" y="208.5" width="375" height="250"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C0c-Qo-8by">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fmi-ZN-Tge">
+                                            <rect key="frame" x="20" y="22" width="335" height="206.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="WorkIt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rm-G5-6kd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="83.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="61"/>
+                                                    <color key="textColor" red="0.58431372549019611" green="0.46666666666666667" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your workout..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vov-nf-8VW">
+                                                    <rect key="frame" x="0.0" y="89.5" width="335" height="29"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                                    <color key="textColor" red="0.58431372550000005" green="0.46666666670000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USI-Uk-g2H">
+                                                    <rect key="frame" x="0.0" y="124.5" width="335" height="30.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                                    <color key="textColor" red="0.98878632484094675" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnJ-cm-Km6">
+                                                    <rect key="frame" x="0.0" y="161" width="335" height="45.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="33"/>
+                                                    <color key="textColor" red="0.50980392156862742" green="0.054901960784313725" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fmi-ZN-Tge" firstAttribute="leading" secondItem="C0c-Qo-8by" secondAttribute="leading" constant="20" id="B46-hM-SRQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="fmi-ZN-Tge" secondAttribute="trailing" constant="20" id="CxU-Yj-LNf"/>
+                                        <constraint firstItem="fmi-ZN-Tge" firstAttribute="centerY" secondItem="C0c-Qo-8by" secondAttribute="centerY" id="tX4-yb-RtT"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="N2a-aw-rmC"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XXa-4C-Ef2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4Rv-bR-Nej"/>
+                            <constraint firstItem="xlA-4X-iKD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hge-NP-s5G"/>
+                            <constraint firstItem="xlA-4X-iKD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hp2-tf-3El"/>
+                            <constraint firstItem="XXa-4C-Ef2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UZ3-oc-gsk"/>
+                            <constraint firstItem="xlA-4X-iKD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="k5U-zo-6qH"/>
+                            <constraint firstItem="XXa-4C-Ef2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tlT-Td-4Kx"/>
+                            <constraint firstItem="XXa-4C-Ef2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vCe-5u-Wy8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="timerLbl" destination="RnJ-cm-Km6" id="CwU-Lg-3RY"/>
+                        <outlet property="workoutTypeLbl" destination="USI-Uk-g2H" id="Psp-Kb-N6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="run" width="2000" height="1334"/>
+    </resources>
 </document>
