@@ -26,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
        
+        DataService.instance.startWorkoutIntent = intent
+        
+        NotificationCenter.default.post(name: NSNotification.Name("workoutStartedNotification"), object: nil)
         print("AppDelegate: Start Workout Intent - TRUE")
         print(intent)
         return true

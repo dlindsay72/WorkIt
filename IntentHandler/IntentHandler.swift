@@ -24,7 +24,7 @@ class IntentHandler: INExtension, INStartWorkoutIntentHandling {
         if spokenPhrase == "walk" || spokenPhrase == "run" {
             completion(INStartWorkoutIntentResponse(code: .handleInApp, userActivity: userActivity))
         } else {
-            completion(INStartWorkoutIntentResponse(code: .failureNoMatchingWorkout, userActivity: userActivity))
+            completion(INStartWorkoutIntentResponse(code: .failureNoMatchingWorkout, userActivity: nil))
         }
         
     }

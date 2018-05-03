@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B15BCA4209A7F4300704479 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B15BCA3209A7F4300704479 /* DataService.swift */; };
 		7B21592A209A50BE000E86E5 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B215929209A50BE000E86E5 /* IntentHandler.swift */; };
 		7B21592E209A50BE000E86E5 /* IntentHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7B215927209A50BD000E86E5 /* IntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7BDF6F9A209A8D310060A0F7 /* DoubleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF6F99209A8D310060A0F7 /* DoubleExt.swift */; };
 		7BE73B06209A148E00A75D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE73B05209A148E00A75D3E /* AppDelegate.swift */; };
 		7BE73B08209A148E00A75D3E /* WorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE73B07209A148E00A75D3E /* WorkoutVC.swift */; };
 		7BE73B0B209A148E00A75D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE73B09209A148E00A75D3E /* Main.storyboard */; };
@@ -41,10 +43,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B15BCA3209A7F4300704479 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7B215927209A50BD000E86E5 /* IntentHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IntentHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B215929209A50BE000E86E5 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		7B21592B209A50BE000E86E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BD00DA8209A204900935E31 /* WorkIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkIt.entitlements; sourceTree = "<group>"; };
+		7BDF6F99209A8D310060A0F7 /* DoubleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExt.swift; sourceTree = "<group>"; };
 		7BE73B02209A148E00A75D3E /* WorkIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE73B05209A148E00A75D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BE73B07209A148E00A75D3E /* WorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVC.swift; sourceTree = "<group>"; };
@@ -72,6 +76,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B15BC9F209A7F0200704479 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7BE73B07209A148E00A75D3E /* WorkoutVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B15BCA0209A7F0B00704479 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7B15BCA3209A7F4300704479 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7B15BCA1209A7F1300704479 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7BDF6F99209A8D310060A0F7 /* DoubleExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7B15BCA2209A7F1B00704479 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BE73B0E209A149000A75D3E /* LaunchScreen.storyboard */,
+				7BE73B09209A148E00A75D3E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7B215928209A50BE000E86E5 /* IntentHandler */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,12 +139,13 @@
 		7BE73B04209A148E00A75D3E /* WorkIt */ = {
 			isa = PBXGroup;
 			children = (
+				7B15BCA1209A7F1300704479 /* Extensions */,
+				7B15BCA0209A7F0B00704479 /* Services */,
+				7B15BCA2209A7F1B00704479 /* View */,
+				7B15BC9F209A7F0200704479 /* Controller */,
 				7BD00DA8209A204900935E31 /* WorkIt.entitlements */,
 				7BE73B05209A148E00A75D3E /* AppDelegate.swift */,
-				7BE73B07209A148E00A75D3E /* WorkoutVC.swift */,
-				7BE73B09209A148E00A75D3E /* Main.storyboard */,
 				7BE73B0C209A149000A75D3E /* Assets.xcassets */,
-				7BE73B0E209A149000A75D3E /* LaunchScreen.storyboard */,
 				7BE73B11209A149000A75D3E /* Info.plist */,
 			);
 			path = WorkIt;
@@ -227,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B15BCA4209A7F4300704479 /* DataService.swift in Sources */,
 				7BE73B08209A148E00A75D3E /* WorkoutVC.swift in Sources */,
+				7BDF6F9A209A8D310060A0F7 /* DoubleExt.swift in Sources */,
 				7BE73B06209A148E00A75D3E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
